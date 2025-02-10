@@ -1,25 +1,56 @@
-# Brain Tumor Detection Using Vision Transformer  
+# **Brain Tumor Detection Using Vision Transformer**  
 
-## Introduction  
+## **Introduction**  
 
-This project focuses on detecting brain tumors from medical images using **Vision Transformer (ViT)**. By leveraging deep learning and transformer-based architectures, this model aims to achieve **high accuracy and robustness** in tumor classification. The project utilizes publicly available medical imaging datasets to train and evaluate the model, providing an **efficient and scalable** solution for brain tumor detection.  
+This project focuses on **brain tumor detection from medical images** using the **Vision Transformer (ViT)**. The model used is **ViT-B/16** from **Google**, pretrained on the **ImageNet-21k** dataset and **fine-tuned** for this specific task.  
 
-## Features  
+## **Features**  
 
-- **Vision Transformer (ViT) for Image Classification**: Utilizes transformer-based architecture for superior feature extraction and classification.  
-- **Medical Image Processing**: Includes preprocessing techniques like **normalization, resizing, and data augmentation** to enhance model performance.  
-- **High Accuracy & Robustness**: Optimized hyperparameters and fine-tuning strategies for improved classification accuracy.  
+✅ **Use of Vision Transformer (ViT-B/16)** for extracting image features and accurately classifying MRI images.  
+✅ **Data processing and preprocessing are automatically and efficiently handled by Hugging Face models.**  
+✅ **High accuracy in detecting various brain tumors and correctly classifying MRI images.**  
 
-## Model  
+## **Model**  
 
-- The **Vision Transformer (ViT)** model is employed for detecting and classifying brain tumors from MRI scans.  
-- The model benefits from **self-attention mechanisms**, allowing it to focus on relevant regions of the image for better decision-making.  
+🧠 The **Vision Transformer (ViT-B/16)** model is used for **brain tumor detection and classification from MRI scans**.  
+🔍 **Data processing and preprocessing are automatically and efficiently handled by Hugging Face models.**  
 
-## Dataset  
+## **Dataset**  
 
-The project utilizes the **Brain Tumor MRI Dataset**, which contains labeled MRI scans for training and evaluation. The dataset is available on Kaggle:  
+This project uses a **combined dataset** from three different sources:  
+
+- **figshare**  
+- **SARTAJ dataset**  
+- **Br35H**  
+
+The dataset consists of **7023 human brain MRI images**, classified into **four categories**:  
+1. **Glioma**  
+2. **Meningioma**  
+3. **No Tumor** (images from the **Br35H** dataset)  
+4. **Pituitary**  
+
+⚠ **Note:** In the **SARTAJ dataset**, the images of the **Glioma** class were not correctly categorized. This issue was identified through reviewing the results of different models and comparing them with other works. As a result, the images from this folder were removed and replaced with images from the **figshare** collection.  
+
+📂 Dataset link on **Kaggle**:  
 [Brain Tumor MRI Dataset](https://www.kaggle.com/datasets/masoudnickparvar/brain-tumor-mri-dataset)  
 
-## Contribution  
+## **Model Performance**  
 
-Your contributions are welcome! You can participate by improving the model, optimizing performance, or reporting issues.
+The model was evaluated on the test data, and the following results were obtained:  
+
+🔹 **Accuracy:** 99%  
+🔹 **Precision:** 99%  
+🔹 **Recall:** 99%  
+🔹 **F1-Score:** 99%  
+
+| Class | Precision | Recall | F1-Score | Support |
+|-------|-----------|--------|----------|---------|
+| Glioma (0) | 98% | 99% | 98% | 281 |
+| Meningioma (1) | 99% | 97% | 98% | 243 |
+| No Tumor (2) | 100% | 99% | 100% | 334 |
+| Pituitary (3) | 98% | 99% | 98% | 285 |
+| **Overall Average** | **99%** | **99%** | **99%** | **1143** |
+
+## **Contributions**  
+
+💡 You can contribute by **improving the model, optimizing performance, reporting issues**, or **adding new features** to enhance this project!
